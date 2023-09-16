@@ -4,11 +4,13 @@ import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 const SingleMovie = () => {
-    const {movieID }=useParams()
+    const {ID }=useParams()
 
-const[ movieList, setMovieList] = useState([])
+const[ movieList, setMovieList] = useState()
+const UTC = movieList?.release_date
+const date = new Date(UTC).toUTCString()
 
-const API_URL = `https://api.themoviedb.org/3/movie/${movieID}?api_key=26d33e90d9e85f13bda167880f9ea53e`
+const API_URL = `https://api.themoviedb.org/3/movie/${ID}?api_key=26d33e90d9e85f13bda167880f9ea53e`
 const getMovie = ()=>{
     fetch(API_URL)
     .then(res=> res.json())
@@ -19,18 +21,17 @@ const getMovie = ()=>{
 
 useEffect(()=>{
     getMovie()
-}, [movieID])
-console.log(movieList)
+}, [ID])
 
     const MovieContent = ()=>{
         return (
         <div className='moviePageImage' >
-            <img src={`https://image.tmdb.org/t/p/original${movieList.poster_path}` } alt='' />
+            <img src={`https://image.tmdb.org/t/p/original${movieList?.poster_path}` } alt='' />
             <div className='image-details' >
-                <p data-testid= 'movie-title' >{movieList.title}</p>
-                <span data-testid= 'movie-release-date' >{movieList.release_date}</span>
-                <p data-testid='movie-overview' >{movieList.overview}</p>
-                <p data-testid= 'movie-runtime' >{movieList.runtime}</p>
+                <p data-testid='movie-title' >{movieList?.title}</p>
+                <span data-testid='movie-release-date' >{date && date }</span>
+                <p data-testid='movie-overview' >{movieList?.overview}</p>
+                <p data-testid='movie-runtime' >{movieList?.runtime}</p>
                 <button>action</button>
                 <button>drama</button>
             </div>

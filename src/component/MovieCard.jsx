@@ -3,12 +3,14 @@ import '../App.css'
 import { Link } from 'react-router-dom'
 
 const MovieCard = (props) => {
-  console.log(props)
+  // console.log(props)
+  const {release_date}=props
+  const UTC = new Date(release_date).toUTCString()
   return (
 
-  <div data-testid= 'movie-card' >
+  <div data-testid='movie-card' >
       
-      <Link className='moviecardLink' to={`/singleMovie/${props.id}`} state={props} >
+      <Link className='moviecardLink' to={`/movies/${props.id}`} state={props} >
         <div className='cardContainer' >
         <div className='poster' >
            <div className='posterImgDiv' ><img data-testid='movie-poster' src={`https://image.tmdb.org/t/p/w500${props.poster_path}` } alt='/>'/> </div>
@@ -16,7 +18,7 @@ const MovieCard = (props) => {
         </div>
         <div className="info">
             <p data-testid='movie-title' className="title">{props.title}</p>
-            <p  data-testid='movie-release-date' className="date">{props.release_date}</p>
+            <p  data-testid='movie-release-date' className="date">{UTC}</p>
         </div>
         </div>
       </Link>

@@ -27,11 +27,11 @@ useEffect(()=>{
         return (
         <div className='moviePageImage' >
             <img src={`https://image.tmdb.org/t/p/original${movieList?.poster_path}` } alt='' />
-            <div className='image-details' >
-                <p data-testid='movie-title' >{movieList?.title}</p>
+            <div className='image-details'>
+                <p data-testid='movie-title'>{movieList?.title}</p>
                 <span data-testid='movie-release-date' >{date && date }</span>
-                <p data-testid='movie-overview' >{movieList?.overview}</p>
-                <p data-testid='movie-runtime' >{movieList?.runtime}</p>
+                <p data-testid='movie-overview'>{movieList?.overview}</p>
+                <p data-testid='movie-runtime'>{movieList?.runtime}</p>
                 <button>action</button>
                 <button>drama</button>
             </div>

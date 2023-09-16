@@ -1,0 +1,187 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.header-top{
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  top: -32em;
+  color: #fff;
+}
+.header-john{
+  right: 52em;
+  top: 10em;
+  position: relative;
+  width: 20em;
+}
+/* .poster-img{
+  width: 100%;
+} */
+.movieDiv{
+  display: flex;
+  flex-wrap: wrap;
+  /* margin-left: 15rem; */
+  border: 1px solid rgb(134, 28, 28);
+  margin-top: -4em;
+  border: none;
+
+}
+.featured{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 7em;
+  margin-top: -5em;
+
+}
+.cardContainer{
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  width: 13rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid black;
+  border: none;
+}
+.poster img{
+  width: 15rem;
+}
+.social-icon{
+  justify-content: center;
+  align-items: center;
+}
+.fa-brands{
+  padding-left: 10px;
+}
+
+.footer-conditions{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 40rem;
+  margin: auto;
+}
+.footer-container{
+  text-align: center;
+  margin: 40px 0 40px 0;
+  line-height: 3;
+}
+.poster-img{
+  width: 100%;
+  height: 600;
+   /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%); */
+   position: relative;
+   z-index: -10;
+   overflow: hidden;
+}
+.movieContainer{
+  display: flex;
+  
+
+}
+.moviePageImage img{
+  width: 85%;
+  height: 30rem;
+  margin-top: 20px;
+  margin-left: 30px;
+  border-radius: 2em;
+
+}
+.image-details{
+  /* display: flex; */
+}
+.image-details p , .image-details span , .image-details button{
+  margin-left: 30px;
+}
+.movieCast{
+  line-height: 3;
+  margin-left: 30px;
+
+}
+.poster .fa-heart{
+position: absolute;
+  display: flex;
+  left: 13.5rem;
+  top: 10px;
+  color: #fff;
+}
+.poster{
+  position: relative;
+}
+.posterImgDiv{
+  left: 0;
+  top: 0;
+}
+
+.poster .posterIconHeart .fa-heart:hover{
+  color: aqua;
+}
+.NavContainer{
+  border: 1px solid black;
+  border-radius:0 2em 2em 0em;
+  line-height: 3;
+  padding-left: 2em;
+}
+.NavContainer ul{
+  margin: 4em 0 4em 0;
+}
+.navDetails{
+  border: 1px solid red;
+  border-radius: 1em;
+  padding: 2em;
+  margin-right: 1em;
+}
+.navDetails button{
+  border-radius: 1em;
+  padding: 10px;
+  border: none;
+}
+.navLogout{
+  border: none;
+  text-align: center;
+  margin-top: 20px;
+}
+.info .date{
+  text-decoration: none;
+}
+.moviecardLink{
+  text-decoration: none;
+}
+.moviecardLink .title{
+  font-weight: 700;
+  color: black;
+}
+.moviecardLink .date{
+  font-weight: 400;
+  color: gray;
+}
+.navLinkDiv{
+  text-decoration: none;
+}
+ul Link .fa-fw{
+  text-decoration: none;
+}
+.image-details p{
+  font-weight: 600;
+}
+
+@media screen and (max-width: 480px){
+  .header-top{
+    top: -14em;
+    font-size: smaller;
+
+  }
+  .header-john{
+    right: 63em;
+  top: 6em;
+  /* position: relative; */
+  width: 10em;
+  font-size: 6px;
+  }
+  .cardContainer{
+    width: 100%;
+    margin-left: 45%;
+  }
+  
+
+}

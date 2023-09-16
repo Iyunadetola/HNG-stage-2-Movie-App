@@ -7,7 +7,7 @@ const Movies = () => {
 
     const[ movieList, setMovieList] = useState([])
 
-    const API_URL = 'https://api.themoviedb.org/3/discover/movie?api_key=26d33e90d9e85f13bda167880f9ea53e'
+    const API_URL = 'https://api.themoviedb.org/3/movie/top_rated?api_key=26d33e90d9e85f13bda167880f9ea53e'
     const getMovie = ()=>{
         fetch(API_URL)
         .then(res=> res.json())
